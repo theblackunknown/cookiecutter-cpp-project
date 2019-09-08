@@ -1,0 +1,117 @@
+BasedOnStyle: LLVM
+
+Language: Cpp
+Standard: Cpp11
+
+UseTab: Always
+TabWidth: 4
+IndentWidth: 4
+ContinuationIndentWidth: 4
+
+AccessModifierOffset: -4
+
+AlignAfterOpenBracket: DontAlign
+AlignConsecutiveAssignments: true
+AlignConsecutiveDeclarations: false
+AlignEscapedNewlines: Right
+AlignOperands: true
+AlignTrailingComments: true
+
+AllowAllParametersOfDeclarationOnNextLine: false
+AllowShortBlocksOnASingleLine: false
+AllowShortCaseLabelsOnASingleLine: false
+AllowShortFunctionsOnASingleLine: InlineOnly
+AllowShortIfStatementsOnASingleLine: false
+AllowShortLoopsOnASingleLine: false
+
+AlwaysBreakAfterReturnType: None
+AlwaysBreakBeforeMultilineStrings: true
+AlwaysBreakTemplateDeclarations: Yes
+
+BinPackArguments: false
+BinPackParameters: true
+
+BreakBeforeBinaryOperators: None
+BreakBeforeBraces: Custom
+BraceWrapping:
+    AfterClass: true
+    AfterControlStatement: true
+    AfterEnum: true
+    AfterFunction: true
+    AfterNamespace: true
+    AfterStruct: true
+    AfterUnion: true
+    AfterExternBlock: false
+    BeforeCatch: true
+    BeforeElse: true
+    IndentBraces: false
+BreakBeforeTernaryOperators: true
+BreakConstructorInitializers: BeforeComma
+BreakInheritanceList: BeforeComma
+
+ColumnLimit: 0
+
+CompactNamespaces: false
+Cpp11BracedListStyle: true
+DerivePointerAlignment: true
+FixNamespaceComments: true
+
+# There is not aggreement on how should we sort our includes
+SortIncludes: true
+IncludeBlocks: Preserve
+IncludeCategories:
+    - Regex:           '^"(.*)'
+      Priority:        10
+    - Regex:           '^<sbsdatacontrol/(.*)'
+      Priority:        20
+    - Regex:           '^<sbsdata/(.*)'
+      Priority:        30
+    - Regex:           '^<pfx/(.*)'
+      Priority:        40
+    - Regex:           '^<image/(.*)'
+      Priority:        50
+    - Regex:           '^<data/(.*)'
+      Priority:        60
+    - Regex:           '^<core/(.*)'
+      Priority:        70
+    - Regex:           '^<algiray/(.*)'
+      Priority:        80
+    - Regex:           '^<boost/(.*)'
+      Priority:        90
+    - Regex:           '^<Q(.*)'
+      Priority:        100
+    - Regex:           '^<(.*)'
+      Priority:        110
+    - Regex:           '.*'
+      Priority:        200
+
+IndentCaseLabels: true
+IndentPPDirectives: AfterHash
+NamespaceIndentation: None
+
+KeepEmptyLinesAtTheStartOfBlocks: true
+MaxEmptyLinesToKeep: 1
+
+PointerAlignment: Left
+
+ReflowComments: true
+
+SortUsingDeclarations: true
+
+SpaceAfterCStyleCast: false
+SpaceAfterTemplateKeyword: false
+SpaceBeforeAssignmentOperators: true
+SpaceBeforeCpp11BracedList: false
+SpaceBeforeParens: ControlStatements
+SpaceBeforeRangeBasedForLoopColon: false
+SpaceInEmptyParentheses: false
+SpacesBeforeTrailingComments: 2
+SpacesInAngles: false
+SpacesInCStyleCastParentheses: false
+SpacesInContainerLiterals: false
+SpacesInParentheses: false
+
+# StatementMacros:
+#     - ALG_UNUSED
+#     - ALG_ASSERT
+#     - Q_UNUSED

@@ -1,0 +1,7 @@
+
+set VK_LAYER_PATH=%VULKAN_SDK%\Bin
+
+@rem set VK_INSTANCE_LAYERS=VK_LAYER_LUNARG_api_dump;VK_LAYER_LUNARG_core_validation
+set VK_INSTANCE_LAYERS=VK_LAYER_LUNARG_standard_validation
+
+set VK_LAYER_SETTINGS_PATH=%VULKAN_SDK%\Config
