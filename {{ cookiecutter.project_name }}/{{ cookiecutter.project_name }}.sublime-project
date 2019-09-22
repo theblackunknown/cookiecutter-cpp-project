@@ -4,15 +4,38 @@
 		{
 			"cmd":
 			[
-				"D:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Preview\\VC\\Auxiliary\\Build\\vcvars64.bat",
+				"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Auxiliary\\Build\\vcvars64.bat",
 				"&&",
 				"ninja",
 				"-k",
 				"20"
 			],
 			"file_regex": "^[ ]*(.+?)\\(([0-9]+)\\): (.*)$",
-			"name": "vkToolkit (Ninja-Debug)",
-			"working_dir": "D:/builds/vktoolkit-ninja-v142-x64-debug"
+			"name": "{{ cookiecutter.project_name }} (Ninja-Debug)",
+			"working_dir": "C:/builds/{{ cookiecutter.project_name }}-debug",
+			"variants":
+			[
+				{
+					"cmd":
+					[
+						"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Auxiliary\\Build\\vcvars64.bat",
+						"-vcvars_ver=14.2",
+						"&&",
+						"echo",
+						"ninja",
+						"-k",
+						"20",
+						"${file}^^",
+						"&&",
+						"ninja",
+						"-k",
+						"20",
+						"${file}^^"
+					],
+					"name": "Current source",
+					"selector": "source.c++"
+				}
+			]
 		}
 	],
 	"folders":
@@ -21,35 +44,13 @@
 			"path": "."
 		},
 		{
-			"path": "D:\\builds\\vktoolkit-ninja-v142-x64-debug"
-		},
-		{
-			"path": "D:\\devel\\vcpkg"
-		},
-		{
-			"path": "D:\\devel\\vcpkg\\installed\\x64-windows\\include\\boost"
+			"path": "C:/builds/{{ cookiecutter.project_name }}-debug"
 		}
 	],
 	"settings":
 	{
 	    "ClangFormat": {
 	    	"format_on_save": true
-	    },
-		"ecc_flags_sources":
-		[
-			{
-				"file": "compile_commands.json",
-				"search_in": "D:/builds/vkviewer-ninja-v141-x64-debug"
-			},
-			{
-				"file": "CMakeLists.txt",
-				"flags":
-				[
-					"-DCMAKE_TOOLCHAIN_FILE:PATH=D:\\devel\\vcpkg\\scripts\\buildsystems\\vcpkg.cmake"
-				]
-			}
-		],
-		"ecc_include_file_folder": false,
-		"ecc_include_file_parent_folder": false
+	    }
 	}
 }

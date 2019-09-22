@@ -2,6 +2,8 @@
     "project_name": "What is your project name ?",
     "project_description": "What is your project description ?",
     "version": "0.0.1",
+    "check_style": false,
+    "pedantic": false,
 
     "license": ["MIT", "BSD-3", "GNU GPL v3.0", "Apache Software License 2.0"]
 }
